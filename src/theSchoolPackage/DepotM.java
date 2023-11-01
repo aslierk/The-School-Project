@@ -71,6 +71,8 @@ DepotM.exit();
     public static void exit() {
 
         System.out.println("See you soon!");
+        System.exit(0);
+
     }
 }
 
