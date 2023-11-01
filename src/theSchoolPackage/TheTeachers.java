@@ -98,7 +98,7 @@ static Map<String, String> theTeachersMap = new HashMap<>();
 
       Set<Map.Entry<String, String>> entrySet = theTeachersMap.entrySet();
 
-
+        System.out.println(theTeachersMap);
       for (Map.Entry<String,String> each :entrySet
        ){
             String eachKey =  each.getKey();
