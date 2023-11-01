@@ -10,8 +10,14 @@ static Map<String, String> theTeachersMap = new HashMap<>();
     static  public void addTheTeacher() {// bu kismi hata görmememe ragmen calistiramadim!!!
 
 
-       theTeachersMap.put("2343234566", "Derya");
+        theTeachersMap.put("2343234566", "Derya , Erkan , 1985 , Physics");
+        theTeachersMap.put("1234566788", "Leyla , Ardan , 1980 , Maths");
+        theTeachersMap.put("9865432278", "Sevil , Sen , 1990 , Biology");
+        theTeachersMap.put("2345667854", "Meral , Kücük , 1970 , Physics");
+        theTeachersMap.put("1789364466", "Doruk , Koray , 1983 , Maths");
+        theTeachersMap.put("9086425799", "Hakan, Koray, 1985 , Biology");
 
+        System.out.println(theTeachersMap);
    }
        public static void theTeachersMenu () {
 
@@ -82,11 +88,19 @@ static Map<String, String> theTeachersMap = new HashMap<>();
 
 
 
-        /*System.out.println("\t\t\t\t\t\t\t The Anatolian College > The Teachers > > The Teachers List \t\t\t\n\n"+
+
+
+    private static void printTheTeachersList() {
+
+
+         System.out.println("\t\t\t\t\t\t\t The Anatolian College > The Teachers > > The Teachers List \t\t\t\n\n"+
                 "Teacher ID        Name           Surname        Date Of Birth      Lesson");
 
-        for (Map.Entry<String, String> each : teacherEntrySet
-        ) {
+      Set<Map.Entry<String, String>> entrySet = theTeachersMap.entrySet();
+
+
+      for (Map.Entry<String,String> each :entrySet
+       ){
             String eachKey =  each.getKey();
             String eachValue = each.getValue();
 
@@ -95,15 +109,7 @@ static Map<String, String> theTeachersMap = new HashMap<>();
             System.out.printf("%6s %-6 %-8  %4s %-s", eachKey, eachValueArr[0], eachValueArr[1], eachValueArr[2], eachValueArr[3]);
 
   }
-         */
 
-
-
-
-
-    private static void printTheTeachersList() {
-
-        System.out.println(theTeachersMap);
     }
 
 
