@@ -73,6 +73,7 @@ static Map<String, String> theTeachersMap = new HashMap<>();
            DepotM.exit();
 
 
+           System.out.println("System exited");
 
 
 
