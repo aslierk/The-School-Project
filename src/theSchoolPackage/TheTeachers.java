@@ -60,12 +60,15 @@ static Map<String, String> theTeachersMap = new HashMap<>();
                        System.out.println("You are quitted from the System.");
 
                    default:
+
                        System.out.println("\n\n\n!!!!  Invalid entry  !!!!\n"+ "Please enter a valid option.\n\n\n");
 
                }
 
 
            }while (!choice.equalsIgnoreCase("Q"));
+
+           // System.out.println("");
 
            DepotM.exit();
 
