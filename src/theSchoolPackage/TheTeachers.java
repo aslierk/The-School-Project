@@ -79,7 +79,7 @@ public class TheTeachers {
 
     }
 
-    private static void findFromTheLessonName() {
+    private static void findFromTheLessonName() { //Bu metodlar input aliyor ama istenilen bilgileri vermiyor!
 
         System.out.println("Please enter the Lesson name. ");
         String wantedLesson = input.nextLine();
@@ -108,7 +108,7 @@ public class TheTeachers {
         });
     }
 
-    public static void findFromTheLastname() throws InterruptedException {
+    public static void findFromTheLastname() throws InterruptedException { //Bu metodlar input aliyor ama istenilen bilgileri vermiyor!
 
         System.out.println("Please enter the last name of the teacher you are looking for. ");
         String wantedSurname = input.nextLine();
