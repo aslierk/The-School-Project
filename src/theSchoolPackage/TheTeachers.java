@@ -15,7 +15,8 @@ public class TheTeachers {
 
         theTeachersMap.put("2343234566", "Derya , Erkan , 1985 , Physics");
         theTeachersMap.put("1234566788", "Leyla , Ardan , 1980 , Maths");
-        theTeachersMap.put("2345667854", "Meral , Kardan , 1970 , Physics");
+        theTeachersMap.put("9865432278", "Sevil , Sen , 1990 , Biology");
+        theTeachersMap.put("2345667854", "Meral , Kücük , 1970 , Physics");
         theTeachersMap.put("1789364466", "Doruk , Koray , 1983 , Maths");
         theTeachersMap.put("9086425799", "Hakan, Koray, 1985 , Biology");
 
@@ -45,13 +46,12 @@ public class TheTeachers {
             switch (choice) {
 
                 case "1":
-
                     printTheTeachersList();
-
                     break;
 
                 case "2":
                     findFromTheLastname();
+                    //findingTeacherUsingSurname();
                     break;
                 case "3":
                     findFromTheLessonName();
@@ -76,7 +76,7 @@ public class TheTeachers {
 
         DepotM.exit();
 
-
+        System.out.println("System exited");
     }
 
     private static void findFromTheLessonName() { //Bu metodlar input aliyor ama istenilen bilgileri vermiyor!
@@ -137,19 +137,69 @@ public class TheTeachers {
             }
         }
 
-        }
+    }
 
-        public static void printTheTeachersList () throws InterruptedException {
+    public static void printTheTeachersList() throws InterruptedException {
 
-            Set<Map.Entry<String, String>> entrySet1 = theTeachersMap.entrySet();
+        Set<Map.Entry<String, String>> entrySet1 = theTeachersMap.entrySet();
 
 
-            System.out.println("\t\t\t\t\t\t\t THE ANATOLIAN COLLEGE  > The Teachers > > The Teachers List \t\t\t\n\n" +
-                    "Teacher ID   Name   Surname  Birth-year  Lesson");
+        System.out.println("\t\t\t\t\t\t\t THE ANATOLIAN COLLEGE  > The Teachers > > The Teachers List \t\t\t\n\n" +
+                "Teacher ID   Name   Surname  Birth-year  Lesson");
 
+
+    }
+
+
+    public static void findingTeacherUsingSurname() {
+        System.out.println("Enter the surname of the teacher you are looking for.");
+        String gettingSurname = input.nextLine();
+
+        Set<Map.Entry<String, String>> teacherEntrySet = theTeachersMap.entrySet();
+        System.out.println("Do you want to find a teacher?\n\n");
+
+        for (Map.Entry<String, String> each : teacherEntrySet
+        ) {
+
+            String getTeacherValues = each.getValue();
+            String[] eachValueArr = getTeacherValues.split(",");
+            System.out.println("if e girecek simdi");
+  /*
+  ONEMLI NOT: Kod buraya kadar calisiyor if icerisi false donderiyor nerde hata yapiyorum goremedim
+   */
+
+            if (eachValueArr[1].equalsIgnoreCase(gettingSurname)) {
+                System.out.println("if e girdi mi?");
+            }
 
         }
     }
+
+
+    public static void printTheTeachersList2() {
+
+
+        System.out.println("\t\t\t\t\t\t\t The Anatolian College > The Teachers > > The Teachers List \t\t\t\n\n" +
+                "Teacher ID        Name           Surname        Date Of Birth      Lesson");
+
+        Set<Map.Entry<String, String>> entrySet = theTeachersMap.entrySet();
+
+//        System.out.println(theTeachersMap);
+        for (Map.Entry<String, String> each : entrySet
+        ) {
+            String eachKey = each.getKey();
+            String eachValue = each.getValue();
+
+            String[] eachValueArr = eachValue.split(",");
+
+//            System.out.printf("%6s %-6 %-8  %4s %-s", eachKey, eachValueArr[0], eachValueArr[1], eachValueArr[2], eachValueArr[3]);
+
+//ONEMLI!!! Asli kodunun yazdirma seklinde bir hata oldugu icin exception firlatiyor
+            System.out.println(eachKey + "        " + eachValueArr[0] + "        " + eachValueArr[1]);
+
+        }
+    }
+}
 
 
 
