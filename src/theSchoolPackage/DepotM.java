@@ -6,7 +6,7 @@ public class DepotM {
 
     static Scanner input =new Scanner(System.in);
 
-    public static void mainMenu() {
+    public static void mainMenu() throws InterruptedException {
 
     String choise;
 
@@ -33,7 +33,7 @@ public class DepotM {
                     break;
 
                 case "2":
-TheTeachers.theTeachersMenu();
+                TheTeachers.theTeachersMenu();
 
                     break;
                 case "3":
@@ -59,12 +59,13 @@ DepotM.exit();
 
     }
 
-    private static void printTheInfosOfTheSchool()  {
+    private static void printTheInfosOfTheSchool() throws InterruptedException {
         System.out.println("============ THE ANATOLIAN COLLEGE =============\n "+
                 "\t\t Adress  : " + AboutTheAnatolianCollege.adressOfTheSchool +
                 "\n\t\t Telefon  : " + AboutTheAnatolianCollege.telefonnumberOfTheSchool);
         System.out.println();
 
+Thread.sleep(5000);
 
     }
 
