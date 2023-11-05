@@ -15,10 +15,9 @@ public class DepotM {
 
         System.out.println("============ THE ANATOLIAN COLLEGE =============\n "+
                 "================ MAIN MENU ================\n"+
-                "\n"+
-                "\t 1-  View the School Information\t\t\t" +
+                "\t 1-  View the School Information\n" +
                 "\t 2-  The Menu for Teachers\n"+
-                "\t 3-  The Menu for Students\t\t\t\t"  +
+                "\t 3-  The Menu for Students\n"  +
                 "\t Q-  EXIT\n " );
 
 
