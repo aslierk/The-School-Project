@@ -10,14 +10,14 @@ public class TheTeachers {
     static Map<String, String> theTeachersMap = new HashMap<String, String>();
 
 
-    static public void addTheTeacher() {// bu kismi hata görmememe ragmen calistiramadim!!!
+    static public void addTheTeacher() {
 
 
         theTeachersMap.put("2343234566", "Derya,Erkan,1985,Physics");
-        theTeachersMap.put("1234566788", "Leyla,Ardan,1980,Maths");
+        theTeachersMap.put("1234566788", "Leyla,Ardan,1980,Math");
         theTeachersMap.put("9865432278", "Sevil,Sen,1989,Biology");
         theTeachersMap.put("2345667854", "Meral,Kücük,1970,Physics");
-        theTeachersMap.put("1789364466", "Doruk,Koray,1983,Maths");
+        theTeachersMap.put("1789364466", "Doruk,Koray,1983,Math");
         theTeachersMap.put("9086425799", "Hakan,Koray,1985,Biology");
 
 
@@ -52,7 +52,6 @@ public class TheTeachers {
 
                 case "2":
                     findFromTheLastname();
-//                    findingTeacherUsingSurname();
                     break;
                 case "3":
                     findFromTheLessonName();
@@ -72,8 +71,6 @@ public class TheTeachers {
                     System.out.println("\n\n\n!!!!  Invalid entry  !!!!\n" + "Please enter a valid option.\n\n\n");
 
             }
-
-
         } while (!choice.equalsIgnoreCase("Q"));
 
         DepotM.exit();
@@ -81,7 +78,7 @@ public class TheTeachers {
         System.out.println("System exited");
     }
 
-    private static void findFromTheLessonName() { //Bu metodlar input aliyor ama istenilen bilgileri vermiyor!
+    private static void findFromTheLessonName() {
 
         System.out.println("Please enter the Lesson name. ");
         String wantedLesson = input.nextLine();
@@ -117,7 +114,7 @@ public class TheTeachers {
 
         System.out.println();
 
-        for (Map.Entry<String, String> each : entrySet   //Burada nerede yanlis yaptigimi anlamadim!!!
+        for (Map.Entry<String, String> each : entrySet
         ) {
             String eachKey = each.getKey();
             String eachValue = each.getValue();
@@ -139,11 +136,11 @@ public class TheTeachers {
 
         System.out.println("\t\t\t\t\t\t\t THE ANATOLIAN COLLEGE  > The Teachers > > The Teachers List \t\t\t\n\n" +
                 "Teacher ID   Name   Surname  Birth-year  Lesson");
-        for (Map.Entry<String, String> each : entrySet1   //Burada nerede yanlis yaptigimi anlamadim!!!
+        for (Map.Entry<String, String> each : entrySet1
         ) {
             String eachKey = each.getKey();
             String eachValue = each.getValue();
-            String[] eachValueArr = eachValue.split(", ");
+            String[] eachValueArr = eachValue.split(",");
 
 
             System.out.printf("%-12s %-6s  %-6s  %-10s  %-4s \n", eachKey, eachValueArr[0], eachValueArr[1], eachValueArr[2], eachValueArr[3]);
