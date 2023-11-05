@@ -31,14 +31,13 @@ public class TheTeachers {
         do {
 
             System.out.println("\t\t\t\t\t\t\t The Anatolian College >  The Teachers \t\t\t\n" +
-                    "\n" +
-                    "\t    1 - Print the list of the teachers \t\t\t" +
+                    "\t    1 - Print the list of the teachers \n" +
                     "\t    2 - Find a teacher by last name\n" +
-                    "\t    3 - Find a teacher by the lesson\t\t\t  " +
+                    "\t    3 - Find a teacher by the lesson\n  " +
                     "\t    4 - Enter a new teacher information into the system\n" +
-                    "\t    5 - De-register with ID number\n\n" +
-                    "\t    A - MAINMENU\t\t\t\t\t" +
-                    "\t\t\t    Q - EXIT \n");
+                    "\t    5 - De-register with ID number\n" +
+                    "\t    A - MAINMENU\n" +
+                    "\t    Q - EXIT \n");
 
             System.out.println("Please enter a choice in the menu.");
             choice = input.nextLine();
