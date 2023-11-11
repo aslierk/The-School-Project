@@ -8,6 +8,8 @@ public class _Runner {
         TheTeachers.addTheTeacher();
         DepotM.mainMenu();
 
+        System.out.println("Deneme");
+
 
 
 
