@@ -8,7 +8,8 @@ public class _Runner {
         TheTeachers.addTheTeacher();
         DepotM.mainMenu();
 
-        System.out.println("Deneme");
+        System.out.println("Deneyip gorelim neler olacak");
+
 
 
 
